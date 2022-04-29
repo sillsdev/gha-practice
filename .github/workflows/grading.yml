@@ -1,0 +1,54 @@
+# Action to grade participants actions (reading further in this file will be considered cheating)
+# After today's session cheating is highly encouraged
+
+name: Grade
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  pull_request:
+    branches: [ main ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # Runs a single command using the runners shell
+      - name: Calculate Variables
+        env:
+           ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+        run: |
+          echo "::set-env name=USES_SCORE::$( grep "^\s*\-? uses\s*:" -c .github/workflows/${{ github.head_ref }}.yml )"
+          echo "::set-env name=ID_SCORE::$( grep "^\s*id\s*:" -c .github/workflows/${{ github.head_ref }}.yml )"
+          echo "::set-env name=NAME_SCORE::$( grep "^\s*\-\?\s*name\s*:" -c .github/workflows/${{ github.head_ref }}.yml )"
+          echo "::set-env name=OUTPUT_SCORE::$( grep "^\s*echo \"::set-output" -c .github/workflows/${{ github.head_ref }}.yml )"
+          echo "::set-env name=SECRETS_SCORE::$( grep "^.*{{\s*secrets\." -c .github/workflows/${{ github.head_ref }}.yml )"
+          echo "::set-env name=BUILD_SCORE::$( grep "^\s*run: dotnet build" -c .github/workflows/${{ github.head_ref }}.yml )"
+          echo "::set-env name=TEST_SCORE::$( grep "^\s*run: dotnet test" -c .github/workflows/${{ github.head_ref }}.yml )"
+      - name: Calculate Total
+        run: |
+          echo "$USES_SCORE+$ID_SCORE+$NAME_SCORE+$OUTPUT_SCORE+$SECRETS_SCORE+$BUILD_SCORE+$TEST_SCORE"
+          echo "::set-output name=score::$(($USES_SCORE+$ID_SCORE+$NAME_SCORE+$OUTPUT_SCORE+$SECRETS_SCORE+$BUILD_SCORE+TEST_SCORE))"
+        id: calculate-score
+      - name: Github json
+        run: echo '${{ toJSON(github) }}'
+      - name: Add Grade Comment
+        uses: Beakyn/gha-comment-pull-request@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GradingSecret }}
+        with:
+          comment-message: |
+            ### Your Score: ${{steps.calculate-score.outputs.score}}
+          delete-previous-comment: true
+      - name: Build dotnet
+        run: dotnet build DotnetPractice
+      - name: Run Unit tests
+        run: dotnet test DotnetPractice
