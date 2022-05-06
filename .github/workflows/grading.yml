@@ -48,7 +48,3 @@ jobs:
           comment-message: |
             ### Your Score: ${{steps.calculate-score.outputs.score}}
           delete-previous-comment: true
-      - name: Build dotnet
-        run: dotnet build TestReactProject
-      - name: Run Unit tests
-        run: dotnet test TestReactProject
