@@ -33,3 +33,5 @@ Github action practice repository for Language Technology conference 2022
 - https://github.com/sillsdev/wesay/blob/develop/.github/workflows/PR.yml (matrix build and runs tests for Windows and Linux )
 - https://github.com/sillsdev/wesay/blob/develop/.github/workflows/Installer.yml (builds a Wix installer and uploads it as a Github artifact)
 - https://github.com/sillsdev/Mercurial4Chorus/blob/master/.github/workflows/nuget-ci-cd.yml (builds Nuget package and publishes to Nuget using Secrets)
+- https://github.com/sillsdev/SpeechAnalyzer/blob/master/.github/workflows/msbuild.yml
+- https://github.com/sillsdev/SpeechAnalyzer/blob/master/.github/workflows/parse-langtags.yml
