@@ -1,6 +1,6 @@
 # This is your hello Github Actions file
 
-name: My GHA
+name: WhyAnotherOne?
 
 # Controls when the workflow will run
 on:
@@ -20,14 +20,14 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Run a single command using the runners shell
-      - name: Github json
-        run: echo '${{ toJSON(github) }}'
-
       - name: Build
         run: dotnet build TestReactProject
-# Below you can see how a second job named test could be added that runs on windows and has its own steps
-#  test:
-#    runs-on: windows-latest
-#
-#    steps:
+
+  test:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Test
+        run: dotnet test TestReactProject
