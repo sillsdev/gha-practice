@@ -25,8 +25,12 @@ jobs:
       #   run: echo '${{ toJSON(github) }}'
       - uses: actions/checkout@v3
 
+      - name: List directory
+        run: ls
       - name: Change directory to TestReactProject
         run: cd TestReactProject
+      - name: List directory TestReactProject
+        run: ls
       - name: Build dotnet
         run: dotnet build
 # Below you can see how a second job named test could be added that runs on windows and has its own steps
