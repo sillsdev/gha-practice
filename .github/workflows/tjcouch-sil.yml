@@ -18,20 +18,13 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      # - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       # Run a single command using the runners shell
       # - name: Github json
       #   run: echo '${{ toJSON(github) }}'
-      - uses: actions/checkout@v3
-
-      - name: List directory
-        run: ls
-      - name: Change directory to TestReactProject
-        run: cd TestReactProject
-      - name: List directory TestReactProject
-        run: ls
       - name: Build dotnet
+        working-directory: TestReactProject
         run: dotnet build
 # Below you can see how a second job named test could be added that runs on windows and has its own steps
 #  test:
