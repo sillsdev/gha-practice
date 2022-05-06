@@ -23,6 +23,7 @@ jobs:
       # Run a single command using the runners shell
       - name: Github json
         #run: echo '${{ toJSON(github) }}'
+        run: cd TestReactProject
         run: dotnet build
 # Below you can see how a second job named test could be added that runs on windows and has its own steps
 #  test:
