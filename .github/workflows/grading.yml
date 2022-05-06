@@ -38,8 +38,6 @@ jobs:
           echo "$USES_SCORE+$ID_SCORE+$NAME_SCORE+$OUTPUT_SCORE+$SECRETS_SCORE+$BUILD_SCORE+$TEST_SCORE"
           echo "::set-output name=score::$(($USES_SCORE+$ID_SCORE+$NAME_SCORE+$OUTPUT_SCORE+$SECRETS_SCORE+$BUILD_SCORE+TEST_SCORE))"
         id: calculate-score
-      - name: Github json
-        run: echo '${{ toJSON(github) }}'
       - name: Add Grade Comment
         uses: Beakyn/gha-comment-pull-request@v1.0.1
         env:
