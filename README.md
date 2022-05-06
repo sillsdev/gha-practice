@@ -35,3 +35,4 @@ Github action practice repository for Language Technology conference 2022
 - https://github.com/sillsdev/Mercurial4Chorus/blob/master/.github/workflows/nuget-ci-cd.yml (builds Nuget package and publishes to Nuget using Secrets)
 - https://github.com/sillsdev/SpeechAnalyzer/blob/master/.github/workflows/msbuild.yml
 - https://github.com/sillsdev/SpeechAnalyzer/blob/master/.github/workflows/parse-langtags.yml
+
