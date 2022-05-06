@@ -2,6 +2,7 @@
 Github action practice repository for Language Technology conference 2022
 
 ## Setup
+1. Get Added as a contributor to this repository
 1. Create a branch named after your github user (or anything you like that noone else is likely to use)
 2. Do not look at the grading.yml until after the session if you can help it.
 3. Copy the template.yml file in the .github/workflows to a file with the same name you used for your branch
@@ -25,10 +26,10 @@ Github action practice repository for Language Technology conference 2022
 
 ## Existing LSDev Github Actions (please add other links and descriptions)
 
-https://github.com/sillsdev/docker-appbuilder-agent/blob/develop/.github/workflows/main.yml (builds docker image and pushes to AWS ECR and GHCR)
-https://github.com/sillsdev/appbuilder-buildengine-api/blob/develop/.github/workflows/main.yml (builds docker image and pushes to GHCR)
-https://github.com/sillsdev/appbuilder-portal/blob/develop/.github/workflows/main.yml (builds docker image, pushes to AWS ECR, and does blue/green deployment to ECS)
-https://github.com/sillsdev/appbuilder-storybuilder/blob/main/.github/workflows/release.yml (on tag, creates release in GitHub which is downloaded via GitHub REST API during SAB build)
-https://github.com/sillsdev/wesay/blob/develop/.github/workflows/PR.yml (matrix build and runs tests for Windows and Linux )
-https://github.com/sillsdev/wesay/blob/develop/.github/workflows/Installer.yml (builds a Wix installer and uploads it as a Github artifact)
-https://github.com/sillsdev/Mercurial4Chorus/blob/master/.github/workflows/nuget-ci-cd.yml (builds Nuget package and publishes to Nuget using Secrets)
+- https://github.com/sillsdev/docker-appbuilder-agent/blob/develop/.github/workflows/main.yml (builds docker image and pushes to AWS ECR and GHCR)
+- https://github.com/sillsdev/appbuilder-buildengine-api/blob/develop/.github/workflows/main.yml (builds docker image and pushes to GHCR)
+- https://github.com/sillsdev/appbuilder-portal/blob/develop/.github/workflows/main.yml (builds docker image, pushes to AWS ECR, and does blue/green deployment to ECS)
+- https://github.com/sillsdev/appbuilder-storybuilder/blob/main/.github/workflows/release.yml (on tag, creates release in GitHub which is downloaded via GitHub REST API during SAB build)
+- https://github.com/sillsdev/wesay/blob/develop/.github/workflows/PR.yml (matrix build and runs tests for Windows and Linux )
+- https://github.com/sillsdev/wesay/blob/develop/.github/workflows/Installer.yml (builds a Wix installer and uploads it as a Github artifact)
+- https://github.com/sillsdev/Mercurial4Chorus/blob/master/.github/workflows/nuget-ci-cd.yml (builds Nuget package and publishes to Nuget using Secrets)
