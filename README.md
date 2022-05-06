@@ -3,13 +3,14 @@ Github action practice repository for Language Technology conference 2022
 
 ## Setup
 1. Create a branch named after your github user (or anything you like that noone else is likely to use)
-2. Do not look at the grading.yml
+2. Do not look at the grading.yml until after the session if you can help it.
 3. Copy the template.yml file in the .github/workflows to a file with the same name you used for your branch
-4. Commit and push your branch to the repo
-5. Make a PR
-6. Observe how the action interacts with your PR
+4. Add your name or otherwise change the name from Hello GHA, and change the branch to `main`
+5. Commit and push your branch to the repo
+6. Make a PR
+7. Observe how the action interacts with your PR
 
-## Next steps - Pick one of these and make it work
+## Next steps - Pick from these choices, make it work, repeat
 - Add a new step that runs dotnet build
 - Run unit tests
 - Add a new job
@@ -20,8 +21,9 @@ Github action practice repository for Language Technology conference 2022
 - Publish artifacts from your GHA build 
 - Add conditions to a step https://docs.github.com/en/actions/using-jobs/using-conditions-to-control-job-execution
 - Read the docs for basic understanding: https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions
+- Find an interesting Action on the marketplace and use it https://github.com/marketplace?type=actions
 
-## Existing lsdev Github Actions
+## Existing LSDev Github Actions (please add other links and descriptions)
 
 https://github.com/sillsdev/docker-appbuilder-agent/blob/develop/.github/workflows/main.yml (builds docker image and pushes to AWS ECR and GHCR)
 https://github.com/sillsdev/appbuilder-buildengine-api/blob/develop/.github/workflows/main.yml (builds docker image and pushes to GHCR)
