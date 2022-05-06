@@ -26,7 +26,8 @@ jobs:
 
       # Build the TestReactProject
       - name: TestReactProject
-        run: cd TestReactProject && dotnet build
+        working-directory: TestReactProject
+        run: dotnet build
 # Below you can see how a second job named test could be added that runs on windows and has its own steps
 #  test:
 #    runs-on: windows-latest
