@@ -6,7 +6,7 @@ Github action practice repository for Language Technology conference 2022
 1. Create a branch named after your github user (or anything you like that noone else is likely to use)
 2. Do not look at the grading.yml until after the session if you can help it.
 3. Copy the template.yml file in the .github/workflows to a file with the same name you used for your branch
-4. Add your name or otherwise change the name from Hello GHA, and change the branch to `main`
+4. Add your name or otherwise change the action's `name` from `Hello GHA`, and change the `CHANGETOMAIN` branch entry to `main`
 5. Commit and push your branch to the repo
 6. Make a PR
 7. Observe how the action interacts with your PR
