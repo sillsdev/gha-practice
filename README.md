@@ -7,17 +7,19 @@ Github action practice repository for Language Technology conference 2022
 3. Copy the template.yml file in the .github/workflows to a file with the same name you used for your branch
 4. Commit and push your branch to the repo
 5. Make a PR
+6. Observe how the action interacts with your PR
 
 ## Next steps - Pick one of these and make it work
-1. Observe how the action interacts with your PR
-1. Add a new step that runs dotnet build
-1. Run unit tests
-1. Add a new job
-1. Set an output variable from one step and use it in another
-1. Set an environment variable in one step and use it in another
-1. Make your action get cancelled if you push while it is still running
-1. Add a matrix and use it (build platform is an obvious use)
-1. Publish artifacts from your GHA build
+- Add a new step that runs dotnet build
+- Run unit tests
+- Add a new job
+- Set an environment variable in one step and use it in another https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#setting-an-environment-variable
+- Set an output variable from one step and use it in another https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idoutputs
+- Make your action get cancelled if you push while it is still running https://docs.github.com/en/actions/using-jobs/using-concurrency
+- Add a matrix and use it (build platform is an obvious use) https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs
+- Publish artifacts from your GHA build 
+- Add conditions to a step https://docs.github.com/en/actions/using-jobs/using-conditions-to-control-job-execution
+- Read the docs for basic understanding: https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions
 
 ## Existing lsdev Github Actions
 
