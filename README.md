@@ -1,7 +1,9 @@
 # gha-practice
+
 Github action practice repository for Language Technology conference 2022
 
 ## Setup
+
 1. Get Added as a contributor to this repository
 1. Create a branch named after your github user (or anything you like that noone else is likely to use)
 2. Do not look at the grading.yml until after the session if you can help it.
@@ -12,6 +14,7 @@ Github action practice repository for Language Technology conference 2022
 7. Observe how the action interacts with your PR
 
 ## Next steps - Pick from these choices, make it work, repeat
+
 - Add a new step that runs dotnet build
 - Run unit tests
 - Add a new job
@@ -19,7 +22,7 @@ Github action practice repository for Language Technology conference 2022
 - Set an output variable from one step and use it in another https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idoutputs
 - Make your action get cancelled if you push while it is still running https://docs.github.com/en/actions/using-jobs/using-concurrency
 - Add a matrix and use it (build platform is an obvious use) https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs
-- Publish artifacts from your GHA build 
+- Publish artifacts from your GHA build
 - Add conditions to a step https://docs.github.com/en/actions/using-jobs/using-conditions-to-control-job-execution
 - Read the docs for basic understanding: https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions
 - Find an interesting Action on the marketplace and use it https://github.com/marketplace?type=actions
@@ -35,4 +38,3 @@ Github action practice repository for Language Technology conference 2022
 - https://github.com/sillsdev/Mercurial4Chorus/blob/master/.github/workflows/nuget-ci-cd.yml (builds Nuget package and publishes to Nuget using Secrets)
 - https://github.com/sillsdev/SpeechAnalyzer/blob/master/.github/workflows/msbuild.yml
 - https://github.com/sillsdev/SpeechAnalyzer/blob/master/.github/workflows/parse-langtags.yml
-

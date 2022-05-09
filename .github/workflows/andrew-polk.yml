@@ -6,7 +6,7 @@ name: Andrew
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -21,11 +21,11 @@ jobs:
       - uses: actions/checkout@v3
 
       # Run a single command using the runners shell
-      - name: Github json
-        run: echo '${{ toJSON(github) }}'
+      - name: dotnet build
+        run: dotnet build TestReactProject
 # Below you can see how a second job named test could be added that runs on windows and has its own steps
 #  test:
 #    runs-on: windows-latest
-#    
+#
 #    steps:
-      
+
