@@ -20,9 +20,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Run a single command using the runners shell
-      - name: dotnet build
+      - name: Build
         run: dotnet build TestReactProject
+      - name: Test
+        run: dotnet test TestReactProject
 # Below you can see how a second job named test could be added that runs on windows and has its own steps
 #  test:
 #    runs-on: windows-latest
