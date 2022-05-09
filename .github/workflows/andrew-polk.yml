@@ -24,6 +24,12 @@ jobs:
         run: dotnet build TestReactProject
       - name: Test
         run: dotnet test TestReactProject
+
+      - name: Set Env Var
+        env:
+          My_Var: ABC
+      - name: Read Env Var
+        run: echo "$My_Var"
 # Below you can see how a second job named test could be added that runs on windows and has its own steps
 #  test:
 #    runs-on: windows-latest
